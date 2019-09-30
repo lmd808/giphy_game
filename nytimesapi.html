@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="utf-8">
+  <title>NY times api</title>
+</head>
+​
+<body>
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>New York Times Search</title>
+  </head>
+  <body class = "container">
+    <h1 class ="text-center , jumbotron">New York Times Search!</h1>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <form>
+         <h5 class = "card-header">Search Parameters!</h5><br>
+        <div class="form-group">
+          <label for="inputsm">Search Term: </label>
+          <input class="form-control input-sm" id="searchTerm" type="text">
+        </div>
+         <div class="form-group">
+          <label for="inputdefault">Number of Records to Retrieve: </label>
+          <input class="form-control" id="inputdefault" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputlg">Start Year (Optional): </label>
+          <input class="form-control input-lg" id="inputlg" type="text">
+        </div>
+        <div class="form-group">
+            <label for="inputlg">End Year (Optional): </label>
+            <input class="form-control input-lg" id="inputlg" type="text">
+        </div>
+        <input type = "button" id="search">Search</input>
+        <input type = "button"> Clear Results</input>
+        <h5 class = "card-header">Top Articles!</h5><br>
+      </form>
+  </html>
+  <div id="articles-appear-here">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $("#search").on("click", function() {
+      var searchTerm = document.getElementById('searchTerm').value;
+      console.log(searchTerm);
+      
+      var queryURL ='https://api.nytimes.com/svc/search/v2/articlesearch.json?q='+searchTerm+'&api-key=GaB7lP16dHpgUzrYTF3DjDRjcvPcDSmR';
+      
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(data) {
+        console.log(data);
+          var result = data.response.docs;
+        for (var i = 0; i < result.length; i++) {
+          var articleDiv = $("<div>");
+          var articleLayout = $("<p>");
+            articleLayout.append(`<h2>${result[i].headline.main}<h2> <br>`);
+            articleLayout.append(result[i].byline.original + '<br>');
+            articleLayout.append(result[i]._id);         
+          articleDiv.append(articleLayout);
+          $("#articles-appear-here").prepend(articleDiv);
+        }
+      });
+    }); 
+</script>
+</body>​
+</html>
