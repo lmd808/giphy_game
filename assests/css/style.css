@@ -1,18 +1,13 @@
 body {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(
-		90deg,
-		rgba(2, 0, 36, 1) 17%,
-		rgba(38, 36, 28, 1) 23%,
-		rgba(75, 72, 19, 1) 37%,
-		rgba(101, 98, 13, 1) 53%,
-		rgba(121, 118, 9, 1) 66%,
-		rgba(97, 50, 90, 1) 79%,
-		rgba(76, 86, 126, 1) 100%,
-		rgba(0, 212, 255, 1) 100%
-	);
+	background-image: url('..//images/bg.jpg');
+	background-size: cover;
 	color: #fff;
 	font-family: monospace;
+}
+#my-heading {
+	margin-top: 5px;
+	font-size: 60px;
+	font-weight: bold;
 }
 #buttonDiv {
 	padding: 15px;
@@ -20,16 +15,20 @@ body {
 .images {
 	height: 200px;
 	width: 200px;
-	border: 3px solid black;
+	border: 3px double black;
 	margin: 3px;
 }
 
 #sDiv {
 	width: 300px;
+	margin-left: 100px;
 }
 
 #gifDiv {
-	width: 800px;
+	width: 600px;
+	padding-right: 10px;
+	border-right: solid white 4px;
+	height: auto;
 }
 .animal-button {
 	margin: 4px;
@@ -37,9 +36,12 @@ body {
 
 footer {
 	text-align: center;
-}
-#footerDiv {
 	padding-top: 10px;
-	margin-top: 450px;
+	margin-top: 400px;
 	background-color: rgba(0, 0, 0, .6);
+	padding-bottom: 5px;
+}
+
+.newPadding {
+	margin: 10px;
 }
