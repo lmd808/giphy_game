@@ -16,7 +16,7 @@
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) -is a stylesheet language used to describe the presentation of a document written in HTML or XML
 * [Giphy API](https://developers.giphy.com/) - GIPHY SDK helps you integrate the world's largest GIF library. 
 
-## Heroku Link: 
+##Links : 
 * Repo: [Git hub Repo](https://github.com/lmd808/giphy_Game).
 * Deployed: [GitHub Pages](https://lmd808.github.io/Trivia_Game/).
 
