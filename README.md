@@ -1,18 +1,35 @@
-# giphy_game
-This is my gifphy api project 
-# format 
-a preloaded array has its values pushed into buttons when the document loads 
-the user has the option of adding button to the button row by adding them via the search bar on the right hand side 
+# Giphy Stash
 
-# gif loading
-if you click on the button it will give you a list of 10 gifs for that search term ex. puppy will load 10 gifs of puppies 
+### *Search giphy api with ease*
+* This application will help you find fun gifs with ease 
 
-gifs all load with their still url 
+## Local Usage
+* Clone this repo to your computer
+* open from the index.html file 
+* Enjoy!
 
-if you click on a gif it will change their state to animate
-if you clikc on it again it will refreeze 
+## Technologies: 
+* [Javascript](https://www.javascript.com/) - The scripting language used to manipulate the DOM. 
+* [JQuery](https://jquery.com/) - jQuery is a fast (arguable), small, and feature-rich JavaScript library.
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Mark up language used for structuring pages. 
+* [BootStrap](https://getbootstrap.com/) - popular framework for building responsive websites
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) -is a stylesheet language used to describe the presentation of a document written in HTML or XML
+* [Giphy API](https://developers.giphy.com/) - GIPHY SDK helps you integrate the world's largest GIF library. 
 
-# issues
-It's not an issue, but i'm trying to get ahead with work. So should and could I spend more time on this and make it look perfect? Yes. But do I have the time to? not right now. 
-I'm not happy about that, but I have to live with it for now. 
+## Heroku Link: 
+* Repo: [Git hub Repo](https://github.com/lmd808/giphy_Game).
+* Deployed: [GitHub Pages](https://lmd808.github.io/Trivia_Game/).
 
+## HomePage and Quick Site Demo:  
+
+![homePage](./images/demo1.gif)
+![Demo](./images/demo2.gif)
+![Demo](./images/demo3.gif)
+
+
+## Challenges: 
+* My biggest challenge on this project was resisinc the images to make them look nice 
+
+
+## Creator: 
+Laura DiTommaso
