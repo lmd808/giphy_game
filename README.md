@@ -32,4 +32,4 @@
 
 
 ## Creator: 
-Laura DiTommaso
+Laura DiTommaso [GitHub](https://github.com/lmd808)
